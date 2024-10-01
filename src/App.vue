@@ -1,11 +1,26 @@
-<template >
-  <h1>Hello World</h1>
-</template >
+<template>
+  <Header/>
+  <main>
+    <Setup/>
+    <MCTSVisualizer/>
+  </main>
+</template>
 
-<script >
-export default {}
-</script >
+<script>
+import Setup from '@/Components/Setup.vue'
+import Header from '@/Components/Header.vue'
+import MCTSVisualizer from '@/Components/MCTSVisualizer.vue'
 
-<style scoped lang="scss" >
+export default {
+  components: { Header, Setup, MCTSVisualizer }
+}
+</script>
 
-</style >
+<style scoped lang="scss">
+main {
+  padding-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  justify-items: center;
+}
+</style>
